@@ -17,6 +17,7 @@ public class SwaggerUiServerApplication {
 		SpringApplication.run(SwaggerUiServerApplication.class, args);
 	}
 
+    @Autowired
 	private CORSFilter corsFilter;
 
 	@Bean
@@ -35,14 +36,10 @@ public class SwaggerUiServerApplication {
 	@Bean
 	public FilterRegistrationBean someFilterRegistrationBean() {
 		FilterRegistrationBean registration = new FilterRegistrationBean();
-		registration.setFilter(getCorsFilter());
+		registration.setFilter(corsFilter);
 		registration.setName("corsFilter");
 		registration.setOrder(1);
 		return registration;
 	}
 
-	@Autowired
-	public CORSFilter getCorsFilter() {
-		return corsFilter;
-	}
 }
