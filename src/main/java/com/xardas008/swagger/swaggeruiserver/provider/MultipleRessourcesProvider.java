@@ -29,7 +29,7 @@ public class MultipleRessourcesProvider implements SwaggerResourcesProvider {
      *
      * Example:
      * <p>
-     *     'PetClinic':'http://localhost:8080/api/swagger.json~1.0','PetClinicShop':'http://localhost:8180/api/swagger.json~2.0'
+     *     {'PetClinic':'http://localhost:8080/api/swagger.json~1.0','PetClinicShop':'http://localhost:8180/api/swagger.json~2.0'}
      * </p>
      * @return
      */
