@@ -6,6 +6,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import springfox.documentation.swagger.web.SwaggerResource;
 import springfox.documentation.swagger.web.SwaggerResourcesProvider;
 
@@ -16,7 +17,7 @@ import springfox.documentation.swagger.web.SwaggerResourcesProvider;
 @Primary
 public class MultipleRessourcesProvider implements SwaggerResourcesProvider {
 
-    @Value("#{${swagger.ressources}}")
+    @Value("#{${swagger.resources}}")
     private Map<String, String> resources;
 
     /**
